@@ -1,7 +1,71 @@
-gfdzgzfx zf
-fdgfdgd
-fdgfdg
-fdg
-fd
-g
-fd
+from tkinter import * # el resultado c = a * b va a aparecer en una ventana emergente editable correspondiente al widget "Entry()" en el
+root = Tk()           # cual para agregarlo a la pantalla le pasamos como primer parámetro la ventana "root"
+e = Entry(root)       # campo debe posicionarse dentro de esa ventana.
+e.pack()              # Para agregar el resultado dentro del campo creamos una variable  con valor “IntVar()" el 
+e.focus_set()         # cual nos permite guardar en la variable un valor que “Tkinter” entiende como una variable
+a = 5                 # del tipo entera y luego le seteamos el valor con “set()” utilizando lo que se denomina
+b = 2                 # notación de punto para agregarle el resultado a la variable
+c = a * b             # finalmente nuevamente utilizamos la notacion de punto para pasarle a la entrada el valor mediante el atributo
+var = IntVar()        # "textvariable" y la rutina "config()"
+e.config(textvariable=var)
+var.set(c)
+mainloop()
+
+# utilizando random.randint:
+
+from tkinter import *
+import random
+
+root = Tk()
+e = Entry(root)
+e.pack()
+e.focus_set()
+
+a = 1900
+b = "94"
+c = a + int(b)
+c = c * random.randint(1, 100)
+
+var = IntVar()
+e.config(textvariable=var)
+var.set(c)
+mainloop()
+
+o
+
+import random #es lo mismo que arriba, solo que no me arroja el resultado en tkinter
+
+a = 1900
+b = "94"
+c = a + int(b)
+c = c * random.randint(1, 100)
+print(c)
+
+# utilizando ramdom.randrange
+
+from tkinter import *
+import random
+
+root = Tk()
+e = Entry(root)
+e.pack()
+e.focus_set()
+
+a = 5
+b = "5"
+c = a + int(b)
+c = c * random.randrange(0, 11, 2)
+"""al utilizar esta funcion, estamos teniendo en cuentra 3 parametros. el primer numero
+va a ser el limite inferior del intervalo. el segundo numero va a ser el limite superior, pero no va
+a ser incluido. el tercer numero va a decir que vamos a trabajar solo con multiplos de ese numero.
+en este caso, el intervalo se encuentra entre 0 y 10, y los numeros que vamos a encontrar son:
+    2,4,6,8 y 10"""
+
+var = IntVar()
+e.config(textvariable=var)
+var.set(c)
+mainloop()
+
+
+
+
